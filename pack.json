@@ -1,0 +1,74 @@
+{
+  "id": "arachnophobia",
+  "name": "Arachnophobia",
+  "author": "AJD",
+  "description": "Spiders become crabs, recolored to match the original models.",
+  "version": "1.0",
+  "license": "BSD-2-Clause for custom assets; Jagex assets excluded (see LICENSE)",
+  "tags": [
+    "arachnophobia",
+    "accessibility",
+    "spiders"
+  ],
+  "models": [
+    {
+      "key": 1003017,
+      "name": "Giant spider (crab)",
+      "npcIds": [
+        3017,
+        3018
+      ]
+    },
+    {
+      "key": 1002477,
+      "name": "Giant spider, red (crab)",
+      "npcIds": [
+        2477
+      ]
+    },
+    {
+      "key": 1003021,
+      "name": "Deadly red spider (crab)",
+      "npcIds": [
+        3021
+      ]
+    },
+    {
+      "key": 1003020,
+      "name": "Jungle spider (crab)",
+      "npcIds": [
+        3020,
+        6267,
+        6271
+      ]
+    },
+    {
+      "key": 1008703,
+      "name": "Temple Spider (crab)",
+      "npcIds": [
+        8703
+      ]
+    },
+    {
+      "key": 1008713,
+      "name": "Sarachnis (crab)",
+      "npcIds": [
+        8713
+      ]
+    },
+    {
+      "key": 1008714,
+      "name": "Spawn of Sarachnis, melee (crab)",
+      "npcIds": [
+        8714
+      ]
+    },
+    {
+      "key": 1008715,
+      "name": "Spawn of Sarachnis, mage (crab)",
+      "npcIds": [
+        8715
+      ]
+    }
+  ]
+}

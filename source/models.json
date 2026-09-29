@@ -1,0 +1,101 @@
+{
+  "pack": {
+    "id": "arachnophobia",
+    "name": "Arachnophobia",
+    "author": "AJD",
+    "version": "1.0",
+    "description": "Spiders become crabs, recolored to match the original models.",
+    "license": "BSD-2-Clause for custom assets; Jagex assets excluded (see LICENSE)",
+    "tags": ["arachnophobia", "accessibility", "spiders"]
+  },
+  "models": [
+    {
+      "name": "Giant spider (crab)",
+      "glb": "crab-retargeted.glb",
+      "meshId": 1003017,
+      "rigId": 1003017,
+      "npcIds": [3017, 3018],
+      "scaleXZ": 189,
+      "scaleY": 189,
+      "recolors": [{"find": 2859, "replace": 8079}, {"find": 3408, "replace": 9106}, {"find": 2739, "replace": 7061}, {"find": 2624, "replace": 7703}],
+      "animations": { "5326": 5326, "5325": 5325, "5327": 5327, "5328": 5328, "5329": 5329 }
+    },
+    {
+      "name": "Giant spider, red (crab)",
+      "glb": "crab-retargeted.glb",
+      "meshId": 1002477,
+      "rigId": 1002477,
+      "npcIds": [2477],
+      "scaleXZ": 189,
+      "scaleY": 189,
+      "recolors": [{"find": 2859, "replace": 911}, {"find": 3408, "replace": 5010}, {"find": 2739, "replace": 2965}, {"find": 2624, "replace": 535}],
+      "animations": { "5326": 5326, "5325": 5325, "5327": 5327, "5328": 5328, "5329": 5329 }
+    },
+    {
+      "name": "Deadly red spider (crab)",
+      "glb": "crab-retargeted.glb",
+      "meshId": 1003021,
+      "rigId": 1003021,
+      "npcIds": [3021],
+      "scaleXZ": 189,
+      "scaleY": 189,
+      "recolors": [{"find": 2859, "replace": 786}, {"find": 3408, "replace": 64416}, {"find": 2739, "replace": 43275}, {"find": 2624, "replace": 43282}],
+      "animations": { "5326": 5326, "5325": 5325, "5327": 5327, "5328": 5328, "5329": 5329 }
+    },
+    {
+      "name": "Jungle spider (crab)",
+      "glb": "crab-retargeted.glb",
+      "meshId": 1003020,
+      "rigId": 1003020,
+      "npcIds": [3020, 6267, 6271],
+      "scaleXZ": 189,
+      "scaleY": 189,
+      "recolors": [{"find": 2859, "replace": 22814}, {"find": 3408, "replace": 16949}, {"find": 2739, "replace": 8483}, {"find": 2624, "replace": 16939}],
+      "animations": { "5326": 5326, "5325": 5325, "5333": 5333, "5327": 5327, "5328": 5328, "5329": 5329 }
+    },
+    {
+      "name": "Temple Spider (crab)",
+      "glb": "crab-retargeted.glb",
+      "meshId": 1008703,
+      "rigId": 1008703,
+      "npcIds": [8703],
+      "scaleXZ": 189,
+      "scaleY": 189,
+      "recolors": [{"find": 2859, "replace": 57879}, {"find": 3408, "replace": 925}, {"find": 2739, "replace": 43277}, {"find": 2624, "replace": 61731}],
+      "animations": { "5326": 5326, "5325": 5325, "5327": 5327, "5328": 5328, "5329": 5329 }
+    },
+    {
+      "name": "Sarachnis (crab)",
+      "glb": "crab-retargeted.glb",
+      "meshId": 1008713,
+      "rigId": 1008713,
+      "npcIds": [8713],
+      "scaleXZ": 790,
+      "scaleY": 790,
+      "recolors": [{"find": 2859, "replace": 401}, {"find": 3408, "replace": 671}, {"find": 2739, "replace": 910}, {"find": 2624, "replace": 915}],
+      "animations": { "8320": 8320, "8319": 8319, "9136": 9136, "8147": 8147, "4410": 4410, "8318": 8318 }
+    },
+    {
+      "name": "Spawn of Sarachnis, melee (crab)",
+      "glb": "crab-retargeted.glb",
+      "meshId": 1008714,
+      "rigId": 1008714,
+      "npcIds": [8714],
+      "scaleXZ": 333,
+      "scaleY": 333,
+      "recolors": [{"find": 2859, "replace": 3491}, {"find": 3408, "replace": 4018}, {"find": 2739, "replace": 5930}, {"find": 2624, "replace": 3507}],
+      "animations": { "8320": 8320, "8319": 8319, "9136": 9136, "8147": 8147, "4410": 4410, "8318": 8318 }
+    },
+    {
+      "name": "Spawn of Sarachnis, mage (crab)",
+      "glb": "crab-retargeted.glb",
+      "meshId": 1008715,
+      "rigId": 1008715,
+      "npcIds": [8715],
+      "scaleXZ": 333,
+      "scaleY": 333,
+      "recolors": [{"find": 2859, "replace": 39204}, {"find": 3408, "replace": 39731}, {"find": 2739, "replace": 39595}, {"find": 2624, "replace": 39220}],
+      "animations": { "8320": 8320, "8319": 8319, "9136": 9136, "8147": 8147, "4410": 4410, "8318": 8318 }
+    }
+  ]
+}
