@@ -1,0 +1,104 @@
+# Checks a pack: its layout, then that source/ rebuilds to exactly the bundle.dat and pack.json it
+# ships. Runs on pull requests - new packs against pack-empty, updates against their pack branch - and
+# on pushes to accepted pack branches, where a pass also asks master's manifest workflow to list the
+# new commit.
+name: Check pack
+
+on:
+  pull_request:
+    branches: ['pack-*']
+  push:
+    branches: ['pack-*', '!pack-empty']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+env:
+  # The Custom NPC Models commit whose Gradle tasks build packs. Move it on when the tools or the
+  # bundle format change, and rebuild the packs it affects.
+  TOOLS_REPO: AJD-/CustomNPCModels
+  TOOLS_REF: 747fcb4efa49e3943579b0225b4f8cb00d5aac2d
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the pack
+        uses: actions/checkout@v4
+        with:
+          path: pack
+          fetch-depth: 0
+
+      - name: Leave .github as pack-empty has it
+        if: github.event_name == 'pull_request'
+        shell: bash
+        run: |
+          changed=$(git -C pack diff --name-only "${{ github.event.pull_request.base.sha }}" HEAD -- .github)
+          if [ -n "$changed" ]; then
+            echo "A pack pull request may not change .github/:"
+            echo "$changed"
+            exit 1
+          fi
+
+      - name: Check the layout
+        shell: pwsh
+        env:
+          # From the environment, never pasted into the script: a fork names its own branch
+          BRANCH: ${{ github.head_ref || github.ref_name }}
+        run: ./pack/.github/scripts/Check-Pack.ps1 -Pack pack -Branch $env:BRANCH
+
+      - name: Check out the tools
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.TOOLS_REPO }}
+          ref: ${{ env.TOOLS_REF }}
+          path: tools
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '11'
+          cache: gradle
+          cache-dependency-path: tools/*.gradle
+
+      - name: Find the newest live cache
+        id: live
+        shell: pwsh
+        run: ./pack/.github/scripts/Find-LiveCache.ps1
+
+      - name: Restore it
+        id: cached
+        uses: actions/cache@v4
+        with:
+          path: osrs-cache
+          key: openrs2-${{ steps.live.outputs.id }}
+
+      - name: Download it
+        if: steps.cached.outputs.cache-hit != 'true'
+        shell: bash
+        run: |
+          curl -fsSL -o disk.zip "https://archive.openrs2.org/caches/runescape/${{ steps.live.outputs.id }}/disk.zip"
+          mkdir -p osrs-cache
+          unzip -q disk.zip -d osrs-cache
+          rm disk.zip
+
+      - name: Rebuild from source/
+        shell: pwsh
+        run: ./pack/.github/scripts/Rebuild-Pack.ps1 -Pack pack -Tools tools -CacheDir osrs-cache/cache
+
+  list:
+    needs: check
+    if: github.event_name == 'push' && github.repository == 'AJD-/custom-model-hub'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - name: Regenerate the manifest
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run manifest.yml --repo '${{ github.repository }}' --ref master
