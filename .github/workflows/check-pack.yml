@@ -21,7 +21,7 @@ env:
   # The Custom NPC Models commit whose Gradle tasks build packs. Move it on when the tools or the
   # bundle format change, and rebuild the packs it affects.
   TOOLS_REPO: AJD-/CustomNPCModels
-  TOOLS_REF: 747fcb4efa49e3943579b0225b4f8cb00d5aac2d
+  TOOLS_REF: e7bb43a3dadf9f0667d15af894a0be8f6c9f04a2
 
 jobs:
   check:
