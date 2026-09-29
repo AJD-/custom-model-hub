@@ -1,0 +1,23 @@
+{
+  "pack": {
+    "id": "vacuum-mole",
+    "name": "Vacuum Mole",
+    "author": "AJD",
+    "version": "1.0",
+    "description": "The Giant Mole becomes a robot vacuum.",
+    "license": "BSD-2-Clause",
+    "tags": ["giant mole", "fun", "original"]
+  },
+  "models": [
+    {
+      "name": "Giant Mole (robot vacuum)",
+      "glb": "roomba-retargeted.glb",
+      "meshId": 1005779,
+      "rigId": 1005779,
+      "npcIds": [5779, 6499],
+      "scaleXZ": 118,
+      "scaleY": 118,
+      "animations": { "3309": 3309, "3313": 3313, "3312": 3312, "3311": 3311, "3310": 3310, "3314": 3314, "3315": 3315 }
+    }
+  ]
+}

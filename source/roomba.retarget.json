@@ -1,0 +1,9 @@
+{
+  "3309": {"from": "idle", "fit": "loop"},
+  "3313": {"from": "walk", "fit": "loop"},
+  "3312": "attack",
+  "3311": "block",
+  "3310": {"from": "death", "fit": "hold"},
+  "3314": "burrow_down",
+  "3315": "burrow_up"
+}

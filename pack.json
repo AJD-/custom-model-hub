@@ -1,0 +1,23 @@
+{
+  "id": "vacuum-mole",
+  "name": "Vacuum Mole",
+  "author": "AJD",
+  "description": "The Giant Mole becomes a robot vacuum.",
+  "version": "1.0",
+  "license": "BSD-2-Clause",
+  "tags": [
+    "giant mole",
+    "fun",
+    "original"
+  ],
+  "models": [
+    {
+      "key": 1005779,
+      "name": "Giant Mole (robot vacuum)",
+      "npcIds": [
+        5779,
+        6499
+      ]
+    }
+  ]
+}
