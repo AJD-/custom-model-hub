@@ -1,0 +1,52 @@
+# Regenerates manifest.json on the manifest branch from every pack-<id> branch. Asked for by a pack
+# branch's passing check; also runs on a schedule and by hand, so a missed trigger heals itself.
+name: Manifest
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 */6 * * *'
+  push:
+    branches: [master]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: manifest
+  cancel-in-progress: false
+
+jobs:
+  manifest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out every branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build manifest.json
+        shell: pwsh
+        run: ./scripts/Build-Manifest.ps1 -Out "$env:RUNNER_TEMP/manifest.json" -RepoUrl 'https://github.com/${{ github.repository }}'
+
+      - name: Publish it on the manifest branch
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          if git rev-parse --verify --quiet origin/manifest >/dev/null; then
+            git worktree add --detach "$RUNNER_TEMP/manifest" origin/manifest
+          else
+            git worktree add --detach "$RUNNER_TEMP/manifest"
+            git -C "$RUNNER_TEMP/manifest" checkout --orphan manifest
+            git -C "$RUNNER_TEMP/manifest" rm -rfq .
+          fi
+          cp "$RUNNER_TEMP/manifest.json" "$RUNNER_TEMP/manifest/manifest.json"
+          cd "$RUNNER_TEMP/manifest"
+          git add manifest.json
+          if git diff --cached --quiet; then
+            echo 'manifest.json is unchanged.'
+            exit 0
+          fi
+          git commit -q -m 'Update the manifest'
+          git push origin HEAD:refs/heads/manifest
