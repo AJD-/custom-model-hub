@@ -1,0 +1,82 @@
+[
+  {
+    "id": "arachnophobia",
+    "name": "Arachnophobia",
+    "author": "AJD",
+    "description": "Giant spiders, Deadly red spiders, Jungle spiders, Temple Spiders, Sarachnis and her spawn become crabs, recolored to match the spider each replaces.",
+    "version": "1.0",
+    "license": "BSD-2-Clause for custom assets; Jagex assets excluded (see LICENSE)",
+    "tags": [
+      "arachnophobia",
+      "accessibility",
+      "spiders"
+    ],
+    "formatVersion": 3,
+    "commit": "fdf4ec5c217aeeaa51903bc6bcc3ce9df2962618",
+    "size": 83411,
+    "sha256": "95b21105ec673b9110a37334e81f5eb0084349066085b8508c54475698b02c8b",
+    "hasIcon": false,
+    "repo": "https://github.com/AJD-/custom-model-hub/tree/pack-arachnophobia",
+    "models": [
+      {
+        "key": 1003017,
+        "name": "Giant spider (crab)",
+        "npcIds": [
+          3017,
+          3018
+        ]
+      },
+      {
+        "key": 1002477,
+        "name": "Giant spider, red (crab)",
+        "npcIds": [
+          2477
+        ]
+      },
+      {
+        "key": 1003021,
+        "name": "Deadly red spider (crab)",
+        "npcIds": [
+          3021
+        ]
+      },
+      {
+        "key": 1003020,
+        "name": "Jungle spider (crab)",
+        "npcIds": [
+          3020,
+          6267,
+          6271
+        ]
+      },
+      {
+        "key": 1008703,
+        "name": "Temple Spider (crab)",
+        "npcIds": [
+          8703
+        ]
+      },
+      {
+        "key": 1008713,
+        "name": "Sarachnis (crab)",
+        "npcIds": [
+          8713
+        ]
+      },
+      {
+        "key": 1008714,
+        "name": "Spawn of Sarachnis, melee (crab)",
+        "npcIds": [
+          8714
+        ]
+      },
+      {
+        "key": 1008715,
+        "name": "Spawn of Sarachnis, mage (crab)",
+        "npcIds": [
+          8715
+        ]
+      }
+    ]
+  }
+]
