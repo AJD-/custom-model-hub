@@ -13,10 +13,15 @@ The pack branch's checked-out files.
 
 .PARAMETER Branch
 The branch the pack is on, which must be pack-<id>.
+
+.PARAMETER Base
+For a pull request, the commit it would merge into. When that already holds a pack, this is an
+update, and if it changes bundle.dat, icon.png or pack.json it needs a new version.
 #>
 param(
 	[Parameter(Mandatory)] [string] $Pack,
-	[Parameter(Mandatory)] [string] $Branch
+	[Parameter(Mandatory)] [string] $Branch,
+	[string] $Base
 )
 
 $ErrorActionPreference = 'Stop'
@@ -112,6 +117,31 @@ if ($info)
 			{
 				$problems.Add("pack.json has a model without a key, name and npcIds: $($model | ConvertTo-Json -Compress)")
 			}
+		}
+	}
+}
+
+# An update that changes what the plugin downloads or shows needs a new version
+if ($info -and $Base)
+{
+	git -C $root rev-parse --verify --quiet "${Base}^{commit}" > $null
+	if ($LASTEXITCODE -ne 0)
+	{
+		throw "The base commit $Base isn't in $Pack."
+	}
+	# pack-empty holds no pack.json, so a new pack has nothing to compare with
+	$baseJson = git -C $root show "${Base}:pack.json" 2>$null
+	if ($LASTEXITCODE -eq 0)
+	{
+		$baseVersion = ($baseJson -join "`n" | ConvertFrom-Json -Depth 20).version
+		$changed = @(git -C $root diff --name-only $Base -- bundle.dat icon.png pack.json)
+		if ($LASTEXITCODE -ne 0)
+		{
+			throw "git diff against $Base failed."
+		}
+		if ($changed.Count -gt 0 -and $info.version -ceq $baseVersion)
+		{
+			$problems.Add("This changes $($changed -join ', ') but keeps version '$baseVersion'. Set a new version in source/models.json's pack block, and rebuild.")
 		}
 	}
 }
