@@ -1,0 +1,33 @@
+{
+  "id": "vyrewatch-maid",
+  "name": "Vyrewatch Maid",
+  "author": "AJD",
+  "description": "Your house servants become a Vyrewatch maid.",
+  "version": "1.0",
+  "license": "BSD-2-Clause for custom assets; Jagex assets excluded (see LICENSE)",
+  "tags": [
+    "player-owned house",
+    "servants",
+    "maid",
+    "vyrewatch",
+    "fun"
+  ],
+  "models": [
+    {
+      "key": 1000223,
+      "name": "Maid (Vyrewatch maid)",
+      "npcIds": [
+        223,
+        7328
+      ]
+    },
+    {
+      "key": 1000229,
+      "name": "Demon butler (Vyrewatch maid)",
+      "npcIds": [
+        229,
+        7331
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "pack": {
+    "id": "vyrewatch-maid",
+    "name": "Vyrewatch Maid",
+    "author": "AJD",
+    "version": "1.0",
+    "description": "Your house servants become a Vyrewatch maid.",
+    "license": "BSD-2-Clause for custom assets; Jagex assets excluded (see LICENSE)",
+    "tags": ["player-owned house", "servants", "maid", "vyrewatch", "fun"]
+  },
+  "models": [
+    {
+      "name": "Maid (Vyrewatch maid)",
+      "glb": "vyre-maid-retargeted.glb",
+      "meshId": 1000223,
+      "rigId": 1000223,
+      "npcIds": [223, 7328],
+      "scaleXZ": 128,
+      "scaleY": 128,
+      "animations": { "808": 808, "819": 819, "820": 820, "821": 821, "822": 822 },
+      "chathead": {"glb": "vyre-maid-head.glb", "meshId": 2003709, "rigId": 2003709}
+    },
+    {
+      "name": "Demon butler (Vyrewatch maid)",
+      "glb": "vyre-maid-retargeted.glb",
+      "meshId": 1000229,
+      "rigId": 1000229,
+      "npcIds": [229, 7331],
+      "scaleXZ": 128,
+      "scaleY": 128,
+      "animations": { "808": 808, "819": 819, "820": 820, "821": 821, "822": 822 },
+      "chathead": {"glb": "vyre-maid-head.glb", "meshId": 2003709, "rigId": 2003709}
+    }
+  ]
+}
