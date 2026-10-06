@@ -4,9 +4,9 @@ Checks a pack branch's files against the hub's layout rules, without building an
 
 .DESCRIPTION
 Every problem is listed, not just the first. Files that look like exports from the game cache are
-noted, not refused: the hub accepts Jagex-derived packs, but their README must say what they were
-made from, and the reviewer checks that. When GITHUB_STEP_SUMMARY is set, the result is also written
-there as Markdown.
+noted, not refused: the hub accepts Jagex-derived packs, but their ABOUT.md must say what they
+were made from, and the reviewer checks that. When GITHUB_STEP_SUMMARY is set, the result is also
+written there as Markdown.
 
 .PARAMETER Pack
 The pack branch's checked-out files.
@@ -26,7 +26,7 @@ $notes = [System.Collections.Generic.List[string]]::new()
 $MaxBundle = 16MB
 $MaxIcon = 256KB
 $MaxIconSide = 512
-$Allowed = '^(\.gitattributes|pack\.json|bundle\.dat|icon\.png|README\.md|LICENSE|source/.+|notes/.+|\.github/.+)$'
+$Allowed = '^(\.gitattributes|pack\.json|bundle\.dat|icon\.png|ABOUT\.md|LICENSE|source/.+|notes/.+|\.github/.+)$'
 
 function Test-FolderName([string] $name)
 {
@@ -60,11 +60,11 @@ Get-ChildItem -LiteralPath $root -Recurse -File -Force | ForEach-Object {
 	$relative = [System.IO.Path]::GetRelativePath($root, $_.FullName).Replace('\', '/')
 	if ($relative -notmatch '^\.git/' -and $relative -cnotmatch $Allowed)
 	{
-		$problems.Add("``$relative`` isn't part of a pack. A pack holds pack.json, bundle.dat, README.md, LICENSE, source/, and optionally icon.png and notes/.")
+		$problems.Add("``$relative`` isn't part of a pack. A pack holds pack.json, bundle.dat, ABOUT.md, LICENSE, source/, and optionally icon.png and notes/.")
 	}
 }
 
-foreach ($required in 'pack.json', 'bundle.dat', 'README.md', 'LICENSE', 'source/models.json')
+foreach ($required in 'pack.json', 'bundle.dat', 'ABOUT.md', 'LICENSE', 'source/models.json')
 {
 	if (-not (Test-Path -LiteralPath (Join-Path $root $required) -PathType Leaf))
 	{
@@ -174,7 +174,7 @@ Get-ChildItem -LiteralPath (Join-Path $root 'source') -Filter '*.glb' -File -Err
 	$found = @($markers | Where-Object { $text.Contains($_) })
 	if ($found.Count -gt 0)
 	{
-		$notes.Add("``source/$($_.Name)`` looks like an export from the game cache ($($found -join ', ')). That's allowed; check that README.md says what it was made from.")
+		$notes.Add("``source/$($_.Name)`` looks like an export from the game cache ($($found -join ', ')). That's allowed; check that ABOUT.md says what it was made from.")
 	}
 }
 
