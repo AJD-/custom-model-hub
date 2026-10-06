@@ -3,7 +3,7 @@
     "id": "arachnophobia",
     "name": "Arachnophobia",
     "author": "AJD",
-    "version": "1.0",
+    "version": "1.1",
     "description": "Spiders become crabs, recolored to match the original models.",
     "license": "BSD-2-Clause for custom assets; Jagex assets excluded (see LICENSE)",
     "tags": ["arachnophobia", "accessibility", "spiders"]
