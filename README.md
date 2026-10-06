@@ -88,7 +88,8 @@ new `version`.
 
 ## What CI checks
 
-**Check pack** runs on pull requests against `pack-empty`, and on pushes to `pack-*` branches:
+**Check pack** runs on pull requests against `pack-*` branches (`pack-empty` for a new pack,
+`pack-<id>` for an update), and on pushes to `pack-*` branches:
 
 - The layout: only the files above, `pack.json` complete, the branch named after the id, and
   `bundle.dat` and `icon.png` within the plugin's limits. Sources that look like exports from the game
@@ -100,6 +101,24 @@ new `version`.
   `bundle.dat` must match once decompressed, and `pack.json` must match as JSON.
 
 A pass on a `pack-*` branch here then asks **Manifest** to run.
+
+## Accepting a pack (for maintainers)
+
+A new pack's pull request targets `pack-empty`, since its `pack-<id>` branch doesn't exist yet. Never
+merge it there: `pack-empty` is what every later pack starts from. Instead:
+
+1. Review it against `pack-empty`. A first-time contributor's run needs **Approve and run**. A pull
+   request's workflow comes from the pull request itself, so look in **Files changed** for any
+   `.github/` path, not only at the check.
+2. Make sure `pack-<id>` doesn't exist. If it does, the id is taken: ask for another, or for an update
+   against that branch.
+3. Create `pack-<id>` at `pack-empty`'s tip:
+   `git push origin origin/pack-empty:refs/heads/pack-<id>`
+4. Point the pull request at it: **Edit** beside its title, or `gh pr edit <number> --base pack-<id>`.
+   The diff is the same, and Check pack runs again.
+5. **Squash and merge**, as `Add <name> <version>`.
+
+The push to `pack-<id>` runs Check pack, and its pass asks Manifest to list the pack.
 
 ## The manifest (for maintainers)
 
