@@ -96,6 +96,7 @@ new `version`.
   cache are noted in the run summary, so the reviewer can check that ABOUT.md says so. They aren't
   refused.
 - That the pull request leaves `.github/` as `pack-empty` has it.
+- On an update, that a change to `bundle.dat`, `icon.png` or `pack.json` comes with a new `version`.
 - The rebuild. The Custom NPC Models tools, at the commit pinned in the workflow, rebuild the pack
   from `source/` against the newest Old School live cache in the [OpenRS2 archive](https://archive.openrs2.org/).
   `bundle.dat` must match once decompressed, and `pack.json` must match as JSON.
