@@ -49,7 +49,9 @@ jobs:
         env:
           # From the environment, never pasted into the script: a fork names its own branch
           BRANCH: ${{ github.head_ref || github.ref_name }}
-        run: ./pack/.github/scripts/Check-Pack.ps1 -Pack pack -Branch $env:BRANCH
+          # Empty on a push, so only a pull request is held to a new version
+          BASE: ${{ github.event.pull_request.base.sha }}
+        run: ./pack/.github/scripts/Check-Pack.ps1 -Pack pack -Branch $env:BRANCH -Base $env:BASE
 
       - name: Check out the tools
         uses: actions/checkout@v4
