@@ -13,7 +13,7 @@ that has no readable bundle.dat is left out with a warning, so one bad branch ne
 Where to write manifest.json.
 
 .PARAMETER RepoUrl
-The hub's page on GitHub. Each entry links its branch's page beneath it.
+The hub's page on GitHub. Each entry links its branch's ABOUT.md beneath it.
 
 .PARAMETER RefPrefix
 Where the pack branches are: refs/remotes/origin/ in a CI checkout, refs/heads/ locally.
@@ -128,7 +128,7 @@ foreach ($line in $refs)
 			size = $bundle.Length
 			sha256 = $sha256
 			hasIcon = $hasIcon
-			repo = "$RepoUrl/tree/$branch"
+			repo = "$RepoUrl/blob/$branch/ABOUT.md"
 			models = @($info.models)
 		})
 		Write-Host "Listed $id at $commit"

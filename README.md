@@ -126,7 +126,7 @@ files from `.../<commit>/bundle.dat` and `.../<commit>/icon.png`. It's an array 
     "size": 13589,
     "sha256": "<SHA-256 of bundle.dat, lowercase hex>",
     "hasIcon": true,
-    "repo": "https://github.com/AJD-/custom-model-hub/tree/pack-my-mole",
+    "repo": "https://github.com/AJD-/custom-model-hub/blob/pack-my-mole/ABOUT.md",
     "models": [{ "key": 1005779, "name": "Giant Mole", "npcIds": [5779] }]
   }
 ]
