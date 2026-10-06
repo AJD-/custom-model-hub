@@ -9,20 +9,56 @@ the plugin reads, and which a workflow rebuilds from the pack branches.
 
 ## What a pack branch holds
 
-The files sit at the branch root:
+The files sit at the branch root. Outside `source/` and `notes/`, **Check pack** refuses any file
+not listed here.
+
+### Required
 
 | File | |
 |---|---|
-| `pack.json` | `id`, `name`, `author`, `description`, `version`, `license`, `tags`, and the `models` list, all as `generateAssets -PpackOut` writes them |
-| `bundle.dat` | Built with `generateAssets -PpackOut`. At most 16 MiB. |
-| `icon.png` | Optional. A real PNG, ideally 128 × 128. At most 512 pixels a side and 256 KiB, or it isn't shown. |
-| `README.md` | What the pack changes, and what it was made from. |
+| `pack.json` | Written by `generateAssets -PpackOut`, never by hand. It needs an `id`, `name`, `author`, `version` and `license`, and a `models` list that isn't empty, each model with a `key`, `name` and `npcIds`. `description` is optional, and `tags`, when given, is a list of strings. |
+| `bundle.dat` | Built with `generateAssets -PpackOut`. A gzipped bundle, 1 byte to 16 MiB. |
+| `ABOUT.md` | What the pack changes, and what it was made from. |
 | `LICENSE` | The license the pack is published under. |
-| `source/models.json` and `source/*.glb` | The source the bundle is built from, so it can be reviewed and rebuilt. Each `source/<name>.retarget.json` beside a `source/<name>.glb` is run through `retargetGltf` first, into `source/<name>-retargeted.glb`. |
-| `notes/` | Optional. Anything that explains the pack, such as renders or the scripts behind its choices. It isn't built. |
+| `source/models.json` | The manifest the pack is built from. Its `pack` block's `id` must be `pack.json`'s. |
+| `source/*.glb` | Every model `source/models.json` names, so the pack can be reviewed and rebuilt. |
 
-The pack `id` is lowercase letters, digits and hyphens. It may not start with `dl-` or be a name
-Windows reserves.
+### Optional
+
+| File | |
+|---|---|
+| `icon.png` | A real PNG, ideally 128 × 128. At most 512 pixels a side and 256 KiB, or it isn't shown. |
+| `source/<name>.retarget.json` | Run through `retargetGltf` first, from `source/<name>.glb` beside it into `source/<name>-retargeted.glb`. A committed `source/<name>-retargeted.glb` must be exactly what that makes. |
+| `notes/` | Anything that explains the pack, such as renders or the scripts behind its choices. It isn't built. |
+| `.gitattributes` and `.github/` | As `pack-empty` has them. Leave them be. |
+
+The pack `id` is 1 to 64 lowercase letters, digits and hyphens, and its branch is `pack-<id>`. It may
+not start with `dl-` or be a name Windows reserves.
+
+`pack.json` is built from the `pack` block of `source/models.json`, so that is where its fields go.
+`generateAssets` needs only an `id` and `name` there, but Check pack also wants an `author`, `version`
+and `license`:
+
+```json
+{
+  "pack": {
+    "id": "my-mole",
+    "name": "My mole",
+    "author": "You",
+    "version": "1.0",
+    "description": "A Giant Mole in a party hat.",
+    "license": "CC-BY-4.0",
+    "tags": ["moles"]
+  },
+  "models": [ ... ]
+}
+```
+
+The plugin only downloads `bundle.dat` and `icon.png`. What its panel shows about a pack comes from
+the manifest, which is built from `pack.json`.
+
+A pack can also be loaded without the hub, from a folder in the plugin's local packs folder. There
+only `bundle.dat` is needed, and `pack.json` is optional.
 
 ## How to submit
 
@@ -39,10 +75,10 @@ new `version`.
 ## Review rules
 
 - **Your own work, or the game's own.** Packs made from the plugin's `exportGltf` output (recolored,
-  edited or retargeted) are accepted, and their README must say what they were made from. Nothing
+  edited or retargeted) are accepted, and their ABOUT.md must say what they were made from. Nothing
   from another game, and nothing of someone else's without their permission.
 - **Jagex assets stay Jagex's.** A pack's license may cover only its own work. Packs that use game
-  assets carry this notice in their README and LICENSE:
+  assets carry this notice in their ABOUT.md and LICENSE:
   > This is not affiliated with, authorized, maintained, or endorsed by Jagex. Old School RuneScape
   > and all associated visual assets, trademarks, and copyrights are the sole property of Jagex.
 - **No adult content.**
@@ -56,7 +92,7 @@ new `version`.
 
 - The layout: only the files above, `pack.json` complete, the branch named after the id, and
   `bundle.dat` and `icon.png` within the plugin's limits. Sources that look like exports from the game
-  cache are noted in the run summary, so the reviewer can check that the README says so. They aren't
+  cache are noted in the run summary, so the reviewer can check that ABOUT.md says so. They aren't
   refused.
 - That the pull request leaves `.github/` as `pack-empty` has it.
 - The rebuild. The Custom NPC Models tools, at the commit pinned in the workflow, rebuild the pack
