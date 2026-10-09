@@ -1,0 +1,51 @@
+{
+  "pack": {
+    "id": "mortina-maid",
+    "name": "Mortina Maid",
+    "author": "AJD",
+    "version": "1.0",
+    "description": "Your house servants become Mortina Daubenton.",
+    "license": "BSD-2-Clause for custom assets; Jagex assets excluded (see LICENSE)",
+    "tags": ["player-owned house", "servants", "maid", "vampyre", "fun"]
+  },
+  "models": [
+    {
+      "name": "Maid (Mortina Daubenton)",
+      "glb": "mortina-retargeted.glb",
+      "meshId": 1000223,
+      "rigId": 1000223,
+      "npcIds": [223, 7328],
+      "scaleXZ": 128,
+      "scaleY": 128,
+      "recolors": [
+        {"find": -31794, "replace": 790},
+        {"find": -21554, "replace": 788},
+        {"find": -16469, "replace": 784},
+        {"find": 20440, "replace": 4758},
+        {"find": 11224, "replace": 4882},
+        {"find": 974, "replace": 3980}
+      ],
+      "animations": { "808": 808, "819": 819, "820": 820, "821": 821, "822": 822 },
+      "chathead": 9708
+    },
+    {
+      "name": "Demon butler (Mortina Daubenton)",
+      "glb": "mortina-retargeted.glb",
+      "meshId": 1000229,
+      "rigId": 1000229,
+      "npcIds": [229, 7331],
+      "scaleXZ": 128,
+      "scaleY": 128,
+      "recolors": [
+        {"find": -31794, "replace": 790},
+        {"find": -21554, "replace": 788},
+        {"find": -16469, "replace": 784},
+        {"find": 20440, "replace": 4758},
+        {"find": 11224, "replace": 4882},
+        {"find": 974, "replace": 3980}
+      ],
+      "animations": { "808": 808, "819": 819, "820": 820, "821": 821, "822": 822 },
+      "chathead": 9708
+    }
+  ]
+}

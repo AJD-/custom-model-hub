@@ -1,0 +1,33 @@
+{
+  "id": "mortina-maid",
+  "name": "Mortina Maid",
+  "author": "AJD",
+  "description": "Your house servants become Mortina Daubenton.",
+  "version": "1.0",
+  "license": "BSD-2-Clause for custom assets; Jagex assets excluded (see LICENSE)",
+  "tags": [
+    "player-owned house",
+    "servants",
+    "maid",
+    "vampyre",
+    "fun"
+  ],
+  "models": [
+    {
+      "key": 1000223,
+      "name": "Maid (Mortina Daubenton)",
+      "npcIds": [
+        223,
+        7328
+      ]
+    },
+    {
+      "key": 1000229,
+      "name": "Demon butler (Mortina Daubenton)",
+      "npcIds": [
+        229,
+        7331
+      ]
+    }
+  ]
+}

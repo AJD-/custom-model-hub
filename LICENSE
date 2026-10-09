@@ -1,0 +1,42 @@
+BSD 2-Clause License (custom assets only)
+
+Copyright (c) 2026, AJD
+All rights reserved.
+
+This license covers the custom assets in this pack: the manifest and retarget
+map (source/models.json, source/mortina.retarget.json), and the script in
+notes/render_mortina.py. It does not cover any Jagex asset; see "Jagex assets"
+below.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Jagex assets
+
+Mortina Daubenton's geometry, colors, rig and animations - in
+source/mortina*.glb and bundle.dat, and in the renders in notes/poses.png and
+icon.png - are taken from the Old School RuneScape game cache and are excluded
+from the license above. Her chathead isn't in this pack; the game's own is
+shown.
+
+This is not affiliated with, authorized, maintained, or endorsed by Jagex. Old
+School RuneScape and all associated visual assets, trademarks, and copyrights
+are the sole property of Jagex.
