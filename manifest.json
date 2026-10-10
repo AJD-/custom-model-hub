@@ -146,5 +146,55 @@
         ]
       }
     ]
+  },
+  {
+    "id": "zanik-thralls",
+    "name": "Zanik Thralls",
+    "author": "AJD",
+    "description": "Your Arceuus thralls become Zanik.",
+    "version": "1.0",
+    "license": "BSD-2-Clause for custom assets; Jagex assets excluded (see LICENSE)",
+    "tags": [
+      "arceuus",
+      "thralls",
+      "zanik",
+      "dorgeshuun",
+      "fun"
+    ],
+    "formatVersion": 3,
+    "commit": "bab19241854a9ba557cd5c5d979e81339503d1b8",
+    "size": 64377,
+    "sha256": "6379e2c8b47ebcb435c6f8a502ac241b9de28b8f2c36282ff489d572a74d5b4f",
+    "hasIcon": true,
+    "repo": "https://github.com/AJD-/custom-model-hub/blob/pack-zanik-thralls/ABOUT.md",
+    "models": [
+      {
+        "key": 1010878,
+        "name": "Ghostly thrall (Zanik in HAM robes)",
+        "npcIds": [
+          10878,
+          10879,
+          10880
+        ]
+      },
+      {
+        "key": 1010881,
+        "name": "Skeletal thrall (Zanik with her bone crossbow)",
+        "npcIds": [
+          10881,
+          10882,
+          10883
+        ]
+      },
+      {
+        "key": 1010884,
+        "name": "Zombified thrall (Dorgesh-Kaan Zanik with a bone dagger)",
+        "npcIds": [
+          10884,
+          10885,
+          10886
+        ]
+      }
+    ]
   }
 ]
