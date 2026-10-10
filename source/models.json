@@ -1,0 +1,44 @@
+{
+  "pack": {
+    "id": "zanik-thralls",
+    "name": "Zanik Thralls",
+    "author": "AJD",
+    "version": "1.0",
+    "description": "Your Arceuus thralls become Zanik.",
+    "license": "BSD-2-Clause for custom assets; Jagex assets excluded (see LICENSE)",
+    "tags": ["arceuus", "thralls", "zanik", "dorgeshuun", "fun"]
+  },
+  "models": [
+    {
+      "name": "Ghostly thrall (Zanik in HAM robes)",
+      "glb": "zanik-ham-retargeted.glb",
+      "meshId": 1010878,
+      "rigId": 1010878,
+      "npcIds": [10878, 10879, 10880],
+      "scaleXZ": 128,
+      "scaleY": 128,
+      "animations": { "894": 894, "10792": 10792, "13683": 13683, "11101": 11101 }
+    },
+    {
+      "name": "Skeletal thrall (Zanik with her bone crossbow)",
+      "glb": "zanik-crossbow-retargeted.glb",
+      "meshId": 1010881,
+      "rigId": 1010881,
+      "npcIds": [10881, 10882, 10883],
+      "scaleXZ": 128,
+      "scaleY": 128,
+      "animations": { "13670": 13670, "13671": 13671, "13684": 13684, "13672": 13672 }
+    },
+    {
+      "name": "Zombified thrall (Dorgesh-Kaan Zanik with a bone dagger)",
+      "glb": "zanik-dagger-retargeted.glb",
+      "meshId": 1010884,
+      "rigId": 1010884,
+      "npcIds": [10884, 10885, 10886],
+      "scaleXZ": 128,
+      "scaleY": 128,
+      "animations": { "13675": 13675, "13676": 13676, "13677": 13677, "13678": 13678, "13679": 13679,
+        "13685": 13685, "13681": 13681 }
+    }
+  ]
+}
