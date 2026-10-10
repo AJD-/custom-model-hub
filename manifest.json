@@ -80,6 +80,45 @@
     ]
   },
   {
+    "id": "mortina-maid",
+    "name": "Mortina Maid",
+    "author": "AJD",
+    "description": "Your house servants become Mortina Daubenton.",
+    "version": "1.0",
+    "license": "BSD-2-Clause for custom assets; Jagex assets excluded (see LICENSE)",
+    "tags": [
+      "player-owned house",
+      "servants",
+      "maid",
+      "vampyre",
+      "fun"
+    ],
+    "formatVersion": 3,
+    "commit": "cc71cae37d8deda75b097cc895edd5817c41409b",
+    "size": 8069,
+    "sha256": "0f7a4a2c6fab17abb119b9b90a215e6e656c8a6d9e08466aebaab38e7b94206f",
+    "hasIcon": true,
+    "repo": "https://github.com/AJD-/custom-model-hub/blob/pack-mortina-maid/ABOUT.md",
+    "models": [
+      {
+        "key": 1000223,
+        "name": "Maid (Mortina Daubenton)",
+        "npcIds": [
+          223,
+          7328
+        ]
+      },
+      {
+        "key": 1000229,
+        "name": "Demon butler (Mortina Daubenton)",
+        "npcIds": [
+          229,
+          7331
+        ]
+      }
+    ]
+  },
+  {
     "id": "vacuum-mole",
     "name": "Vacuum Mole",
     "author": "AJD",
