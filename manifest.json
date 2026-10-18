@@ -80,6 +80,41 @@
     ]
   },
   {
+    "id": "ham-members",
+    "name": "H.A.M. Hams",
+    "author": "AJD",
+    "description": "The pickpocketable H.A.M. Members become glazed hams.",
+    "version": "1.0",
+    "license": "BSD-2-Clause for custom assets; Jagex assets excluded (see LICENSE)",
+    "tags": [
+      "h.a.m.",
+      "thieving",
+      "fun"
+    ],
+    "formatVersion": 3,
+    "commit": "ad59e45a2c1007e485fe75b32f7db4bae6612075",
+    "size": 44653,
+    "sha256": "2f82597fffcf4398821eefc8fb0500c8d46beb82c34a78ea099cb359d1d4bd4a",
+    "hasIcon": true,
+    "repo": "https://github.com/AJD-/custom-model-hub/blob/pack-ham-members/ABOUT.md",
+    "models": [
+      {
+        "key": 1002540,
+        "name": "H.A.M. Member, male (ham)",
+        "npcIds": [
+          2540
+        ]
+      },
+      {
+        "key": 1002541,
+        "name": "H.A.M. Member, female (ham)",
+        "npcIds": [
+          2541
+        ]
+      }
+    ]
+  },
+  {
     "id": "mortina-maid",
     "name": "Mortina Maid",
     "author": "AJD",
