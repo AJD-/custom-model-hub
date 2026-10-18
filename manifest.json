@@ -12,7 +12,7 @@
       "spiders"
     ],
     "formatVersion": 3,
-    "commit": "33dd44915fc8e7d7bbe8a4f53a146bb46bc372ed",
+    "commit": "a73202c6c3dfdd182b25998bc7e41cf19fd6362a",
     "size": 83417,
     "sha256": "a8ee056354cf7cdf0d2ea158bbf80da32c399cf6aa6639dd23509697bfd957a4",
     "hasIcon": true,
@@ -131,7 +131,7 @@
       "original"
     ],
     "formatVersion": 3,
-    "commit": "33c828b6fef98d7f83be3eba9a84e32cad1e14f8",
+    "commit": "395316dbd1b61d1e6bbdb8561fc8b15e64072b1f",
     "size": 6545,
     "sha256": "170dcba2227d5d39b409de7ef4ac8f6867012e69fe1156b7404dbab05e8d0b9c",
     "hasIcon": true,
@@ -162,7 +162,7 @@
       "fun"
     ],
     "formatVersion": 3,
-    "commit": "5e86c8688b29247083b97d5951893024deac2871",
+    "commit": "d7261b84225ce438d47637ad6b038a2d98c89833",
     "size": 201062,
     "sha256": "e5f809627fa229f54784f12892131bf6462a18d9341c672c2c229500eb612847",
     "hasIcon": true,
@@ -182,6 +182,51 @@
         "npcIds": [
           229,
           7331
+        ]
+      }
+    ]
+  },
+  {
+    "id": "yama-maid",
+    "name": "Maid Yama",
+    "author": "AJD",
+    "description": "Yama, Yami and Yama on his throne in a maid's dress, apron and frilled headband. His staff, wings and horns are his own.",
+    "version": "1.0",
+    "license": "BSD-2-Clause for custom assets; Jagex assets excluded (see LICENSE)",
+    "tags": [
+      "varlamore",
+      "boss",
+      "pet",
+      "maid",
+      "fun"
+    ],
+    "formatVersion": 3,
+    "commit": "d8b4267e654239f713517075f59bd8a0f5c0018a",
+    "size": 2110578,
+    "sha256": "e1e66d7c8777186eca36c83d9f497bcd3ac4c0bd92ff7e00a9337f7af64d2b14",
+    "hasIcon": true,
+    "repo": "https://github.com/AJD-/custom-model-hub/blob/pack-yama-maid/ABOUT.md",
+    "models": [
+      {
+        "key": 1014176,
+        "name": "Yama (maid)",
+        "npcIds": [
+          14176
+        ]
+      },
+      {
+        "key": 1014203,
+        "name": "Yami (maid)",
+        "npcIds": [
+          14203,
+          14204
+        ]
+      },
+      {
+        "key": 1000124,
+        "name": "Yama on his throne (maid)",
+        "npcIds": [
+          124
         ]
       }
     ]
