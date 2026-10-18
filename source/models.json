@@ -1,0 +1,85 @@
+{
+  "pack": {
+    "id": "yama-maid",
+    "name": "Maid Yama",
+    "author": "AJD",
+    "version": "1.0",
+    "description": "Yama, Yami and Yama on his throne in a maid's dress, apron and frilled headband. His staff, wings and horns are his own.",
+    "license": "BSD-2-Clause for custom assets; Jagex assets excluded (see LICENSE)",
+    "tags": [
+      "varlamore",
+      "boss",
+      "pet",
+      "maid",
+      "fun"
+    ]
+  },
+  "models": [
+    {
+      "name": "Yama (maid)",
+      "glb": "yama-maid.glb",
+      "meshId": 1014176,
+      "rigId": 1014176,
+      "npcIds": [
+        14176
+      ],
+      "scaleXZ": 160,
+      "scaleY": 160,
+      "ambient": 0,
+      "contrast": 0,
+      "animations": {
+        "12140": 12140,
+        "12141": 12141,
+        "12142": 12142,
+        "12143": 12143,
+        "12144": 12144,
+        "12145": 12145,
+        "12146": 12146,
+        "12147": 12147,
+        "12148": 12148,
+        "12156": 12156,
+        "12160": 12160,
+        "12161": 12161
+      }
+    },
+    {
+      "name": "Yami (maid)",
+      "glb": "yami-maid.glb",
+      "meshId": 1014203,
+      "rigId": 1014203,
+      "npcIds": [
+        14203,
+        14204
+      ],
+      "scaleXZ": 30,
+      "scaleY": 30,
+      "ambient": 0,
+      "contrast": 0,
+      "animations": {
+        "12140": 12140,
+        "12143": 12143
+      }
+    },
+    {
+      "name": "Yama on his throne (maid)",
+      "glb": "yama-throne-maid.glb",
+      "meshId": 1000124,
+      "rigId": 1000124,
+      "npcIds": [
+        124
+      ],
+      "scaleXZ": 128,
+      "scaleY": 128,
+      "ambient": 0,
+      "contrast": 0,
+      "animations": {
+        "12153": 12153
+      },
+      "chathead": {
+        "glb": "yama-chathead-maid.glb",
+        "meshId": 2000124,
+        "rigId": 2000124
+      }
+    }
+  ]
+}

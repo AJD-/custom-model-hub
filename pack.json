@@ -1,0 +1,39 @@
+{
+  "id": "yama-maid",
+  "name": "Maid Yama",
+  "author": "AJD",
+  "description": "Yama, Yami and Yama on his throne in a maid's dress, apron and frilled headband. His staff, wings and horns are his own.",
+  "version": "1.0",
+  "license": "BSD-2-Clause for custom assets; Jagex assets excluded (see LICENSE)",
+  "tags": [
+    "varlamore",
+    "boss",
+    "pet",
+    "maid",
+    "fun"
+  ],
+  "models": [
+    {
+      "key": 1014176,
+      "name": "Yama (maid)",
+      "npcIds": [
+        14176
+      ]
+    },
+    {
+      "key": 1014203,
+      "name": "Yami (maid)",
+      "npcIds": [
+        14203,
+        14204
+      ]
+    },
+    {
+      "key": 1000124,
+      "name": "Yama on his throne (maid)",
+      "npcIds": [
+        124
+      ]
+    }
+  ]
+}
