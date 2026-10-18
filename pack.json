@@ -1,0 +1,29 @@
+{
+  "id": "ham-members",
+  "name": "H.A.M. Hams",
+  "author": "AJD",
+  "description": "The pickpocketable H.A.M. Members become glazed hams.",
+  "version": "1.0",
+  "license": "BSD-2-Clause for custom assets; Jagex assets excluded (see LICENSE)",
+  "tags": [
+    "h.a.m.",
+    "thieving",
+    "fun"
+  ],
+  "models": [
+    {
+      "key": 1002540,
+      "name": "H.A.M. Member, male (ham)",
+      "npcIds": [
+        2540
+      ]
+    },
+    {
+      "key": 1002541,
+      "name": "H.A.M. Member, female (ham)",
+      "npcIds": [
+        2541
+      ]
+    }
+  ]
+}

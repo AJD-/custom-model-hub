@@ -1,0 +1,35 @@
+{
+  "pack": {
+    "id": "ham-members",
+    "name": "H.A.M. Hams",
+    "author": "AJD",
+    "version": "1.0",
+    "description": "The pickpocketable H.A.M. Members become glazed hams.",
+    "license": "BSD-2-Clause for custom assets; Jagex assets excluded (see LICENSE)",
+    "tags": ["h.a.m.", "thieving", "fun"]
+  },
+  "models": [
+    {
+      "name": "H.A.M. Member, male (ham)",
+      "glb": "ham-male.glb",
+      "meshId": 1002540,
+      "rigId": 1002540,
+      "npcIds": [2540],
+      "scaleXZ": 128,
+      "scaleY": 128,
+      "recolors": [{"find": 8741, "replace": -4189}, {"find": 25238, "replace": -4189}, {"find": 7952, "replace": -4189}, {"find": 4550, "replace": 4564}],
+      "animations": { "808": 808, "819": 819, "820": 820, "821": 821, "822": 822, "422": 422, "423": 423, "424": 424, "425": 425, "836": 836 }
+    },
+    {
+      "name": "H.A.M. Member, female (ham)",
+      "glb": "ham-female.glb",
+      "meshId": 1002541,
+      "rigId": 1002541,
+      "npcIds": [2541],
+      "scaleXZ": 115,
+      "scaleY": 115,
+      "recolors": [{"find": 8741, "replace": -4189}, {"find": 25238, "replace": -4189}, {"find": 7952, "replace": -4189}, {"find": 4550, "replace": 4564}],
+      "animations": { "808": 808, "819": 819, "820": 820, "821": 821, "822": 822, "422": 422, "423": 423, "424": 424, "425": 425, "836": 836 }
+    }
+  ]
+}
