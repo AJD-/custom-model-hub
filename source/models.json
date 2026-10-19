@@ -1,0 +1,98 @@
+{
+  "pack": {
+    "id": "axolotl-zebak",
+    "name": "Axolotl Zebak",
+    "author": "AJD",
+    "version": "1.0",
+    "description": "Zebak becomes the Lucy axolotl from Minecraft.",
+    "license": "BSD-2-Clause for the build scripts and geometry; the axolotl design is Mojang's and Jagex assets are excluded (see LICENSE)",
+    "tags": [
+      "toa",
+      "boss",
+      "minecraft",
+      "fun"
+    ]
+  },
+  "models": [
+    {
+      "name": "Zebak (axolotl)",
+      "glb": "axolotl-zebak.glb",
+      "meshId": 1011730,
+      "rigId": 1011730,
+      "npcIds": [
+        11730,
+        11732,
+        11733,
+        12128
+      ],
+      "scaleXZ": 128,
+      "scaleY": 128,
+      "ambient": 30,
+      "contrast": 0,
+      "animations": {
+        "9618": 9618,
+        "9620": 9620,
+        "9622": 9622,
+        "9624": 9624,
+        "9626": 9626,
+        "9628": 9628,
+        "9630": 9630,
+        "9632": 9632,
+        "9634": 9634,
+        "9636": 9636
+      }
+    },
+    {
+      "name": "Zebak's Tail (axolotl)",
+      "glb": "axolotl-tail.glb",
+      "meshId": 1011731,
+      "rigId": 1011731,
+      "npcIds": [
+        11731,
+        11734,
+        12129
+      ],
+      "scaleXZ": 128,
+      "scaleY": 128,
+      "ambient": 30,
+      "contrast": 0,
+      "animations": {
+        "9619": 9619,
+        "9621": 9621,
+        "9623": 9623,
+        "9625": 9625,
+        "9627": 9627,
+        "9629": 9629,
+        "9631": 9631,
+        "9633": 9633,
+        "9635": 9635,
+        "9637": 9637
+      }
+    },
+    {
+      "name": "Zebak's Phantom (axolotl)",
+      "glb": "axolotl-phantom.glb",
+      "meshId": 1011774,
+      "rigId": 1011774,
+      "npcIds": [
+        11774
+      ],
+      "scaleXZ": 80,
+      "scaleY": 80,
+      "ambient": 100,
+      "contrast": 90,
+      "animations": {
+        "9618": 9618,
+        "9620": 9620,
+        "9622": 9622,
+        "9624": 9624,
+        "9626": 9626,
+        "9628": 9628,
+        "9630": 9630,
+        "9632": 9632,
+        "9634": 9634,
+        "9636": 9636
+      }
+    }
+  ]
+}
