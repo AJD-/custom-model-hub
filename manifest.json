@@ -80,6 +80,54 @@
     ]
   },
   {
+    "id": "axolotl-zebak",
+    "name": "Axolotl Zebak",
+    "author": "AJD",
+    "description": "Zebak becomes the Lucy axolotl from Minecraft.",
+    "version": "1.0",
+    "license": "BSD-2-Clause for the build scripts and geometry; the axolotl design is Mojang's and Jagex assets are excluded (see LICENSE)",
+    "tags": [
+      "toa",
+      "boss",
+      "minecraft",
+      "fun"
+    ],
+    "formatVersion": 3,
+    "commit": "65b7480b51d5a6e99742f14f4c995789cb068aab",
+    "size": 566237,
+    "sha256": "43d6785b2f3a8eac834350f125e9cc7bf04b754093060191dfadb03d95d71843",
+    "hasIcon": true,
+    "repo": "https://github.com/AJD-/custom-model-hub/blob/pack-axolotl-zebak/ABOUT.md",
+    "models": [
+      {
+        "key": 1011730,
+        "name": "Zebak (axolotl)",
+        "npcIds": [
+          11730,
+          11732,
+          11733,
+          12128
+        ]
+      },
+      {
+        "key": 1011731,
+        "name": "Zebak's Tail (axolotl)",
+        "npcIds": [
+          11731,
+          11734,
+          12129
+        ]
+      },
+      {
+        "key": 1011774,
+        "name": "Zebak's Phantom (axolotl)",
+        "npcIds": [
+          11774
+        ]
+      }
+    ]
+  },
+  {
     "id": "ham-members",
     "name": "H.A.M. Hams",
     "author": "AJD",
